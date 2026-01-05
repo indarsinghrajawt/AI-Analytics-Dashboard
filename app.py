@@ -72,4 +72,4 @@ if file:
     st.info(generate_summary(df, target, results))
 
 else:
-    st.info("⬅ Upload a CS    isma add kar do
+    st.info("⬅ Upload a CSV file to start analysis")
