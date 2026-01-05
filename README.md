@@ -79,7 +79,7 @@ The model is trained automatically after selecting the target column.
 5. Car Price Dataset
 
 💡 Learning Outcomes
-- From this project, i am learn:
+- From this project, i learn:
 1. How to build a Streamlit app
 2. How to preprocess CSV data
 3. How to train ML models
