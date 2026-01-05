@@ -3,6 +3,7 @@ import sys
 import streamlit as st
 import pandas as pd
 
+# ---------------- PATH FIX ----------------
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(ROOT_DIR)
 
@@ -18,15 +19,67 @@ from utils.visualization import (
 )
 from utils.summary import generate_summary
 
+# ---------------- PAGE CONFIG ----------------
 st.set_page_config(
     page_title="AI Analytics Dashboard",
     layout="wide",
     page_icon="📊"
 )
 
+# ---------------- NEW PREMIUM THEME (CSS) ----------------
+st.markdown("""
+<style>
+/* Global background */
+.stApp {
+  background: radial-gradient(1200px 600px at 10% 10%, #0b1220 0%, #020617 60%);
+  color: #e5e7eb;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+  background: linear-gradient(180deg, #020617, #020617);
+  border-right: 1px solid #1e293b;
+}
+
+/* Metric cards */
+div[data-testid="metric-container"] {
+  background: linear-gradient(180deg, #020617, #0b1220);
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 18px 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+div[data-testid="metric-container"] label {
+  color: #9ca3af !important;
+}
+div[data-testid="metric-container"] div {
+  color: #e5e7eb !important;
+  font-size: 1.6rem;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 700;
+  color: #e5e7eb;
+}
+
+/* Plotly background */
+.js-plotly-plot .plotly {
+  background: transparent !important;
+}
+
+/* Alerts */
+.stAlert {
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# ---------------- TITLE ----------------
 st.title("📊 AI-Powered Analytics Dashboard")
 
-# ---------------- Sidebar ----------------
+# ---------------- SIDEBAR ----------------
 st.sidebar.header("📁 Upload Data")
 file = st.sidebar.file_uploader("Upload CSV file", type=["csv"])
 
@@ -37,6 +90,7 @@ if file:
     target = st.sidebar.selectbox("🎯 Select Target Column", numeric_cols)
 
     # ---------- KPIs ----------
+    st.subheader("📌 Key Metrics")
     kpi_cards(df, target)
 
     # ---------- ML ----------
@@ -72,4 +126,4 @@ if file:
     st.info(generate_summary(df, target, results))
 
 else:
-    st.info("⬅ Upload a CSV file to start analysis")
+    st.info("⬅ Upload a CSV file from the sidebar to start analysis")
