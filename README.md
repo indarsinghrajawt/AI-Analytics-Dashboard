@@ -1,29 +1,34 @@
-# 📊 AI Analytics Dashboard
+# AI-Powered Analytics Dashboard
 
 🔗 Live App:  
 https://ai-analytics-dashboard-2wonyrv4mc6feddsu2d2mi.streamlit.app/
 
-This is a **student-level AI & Data Analytics project** built using **Python and Streamlit**.  
-The app allows users to upload **any CSV file** and automatically performs **data analysis, machine learning, and visualization**.
+---
+
+## 📌 Project Overview
+This project is an AI-powered data analytics application built using Python and Streamlit.
+It allows users to upload any CSV file and automatically performs data analysis,
+machine learning, and interactive visualization through a simple dashboard.
+
+The application demonstrates an end-to-end analytics workflow, including data ingestion,
+cleaning, transformation, modeling, and insight generation.
 
 ---
 
 ## 🎯 Project Objective
-
-The goal of this project is to:
-- Analyze CSV datasets easily
-- Apply machine learning automatically
-- Show insights in a simple dashboard
-- Help beginners understand end-to-end data analytics
+The objectives of this project are to:
+- Analyze CSV datasets easily without manual coding
+- Automatically apply machine learning models
+- Visualize insights through an interactive dashboard
+- Demonstrate an end-to-end data analytics and ML workflow
 
 ---
 
-## 🚀 Features
-
+## 🚀 Key Features
 - Upload any CSV file
 - Automatic detection of numeric columns
-- Select target column for prediction
-- Machine Learning model training
+- Target column selection for prediction
+- Automatic machine learning model training
 - KPI metrics display
 - Interactive charts and plots
 - Model performance evaluation
@@ -32,60 +37,84 @@ The goal of this project is to:
 
 ---
 
-## 🧠 Machine Learning Used
-
-- **Model:** Random Forest Regressor  
-- **Task:** Regression  
-- **Metrics:**
-  - MSE (Mean Squared Error)
-  - RMSE (Root Mean Squared Error)
+## 🧠 Machine Learning Details
+- Model Used: Random Forest Regressor
+- Task: Regression
+- Evaluation Metrics:
+  - Mean Squared Error (MSE)
+  - Root Mean Squared Error (RMSE)
   - R² Score
 
-The model is trained automatically after selecting the target column.
+The model is trained automatically after the user selects the target numeric column.
 
+---
 
-📊 Visualizations Included
+## 📊 Visualizations Included
+- KPI Cards (Total Value, Average Value, Best Value, Data Count)
+- Performance Trend Chart
+- Actual vs Predicted Scatter Plot
+- Target Distribution Histogram
+- Residual Error Analysis Plot
 
-- KPI Cards (Total, Average, Best Value, Count)
-- Performance Trend chart
-- Actual vs Predicted plot
-- Target Distribution histogram
-- Residual Error analysis plot
+---
+
+## 🔄 ETL-Style Workflow
+- Extract: User-uploaded CSV data
+- Transform: Data cleaning, preprocessing, and feature selection
+- Load: Processed data used for analytics, visualization, and modeling
+
+---
+
 ## 🗂️ Project Structure
-   
-- AI-Analytics-Dashboard/
-* |
-* ├── app.py
-   ├── requirements.txt
-* ├── README.md
-* │
-* ├── utils/
-* │ ├── init.py
-* │ ├── data_loader.py
-* │ ├── preprocessing.py
-* │ ├── model.py
-* │ ├── visualization.py
-* │ └── summary.py
-* │
-* └── .streamlit/
-* └── config.toml
+AI-Analytics-Dashboard/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── utils/
+│   ├── __init__.py
+│   ├── data_loader.py
+│   ├── preprocessing.py
+│   ├── model.py
+│   ├── visualization.py
+│   └── summary.py
+│
+└── .streamlit/
+    └── config.toml
 
-🧪 Sample Datasets for Testing
-- You can test this project using datasets from Kaggle, such as:
-1. Students Performance Dataset
-2. House Price Dataset
-3.  Store Sales Dataset
-4. Medical Insurance Dataset
-5. Car Price Dataset
+---
 
-💡 Learning Outcomes
-- From this project, i learn:
-1. How to build a Streamlit app
-2. How to preprocess CSV data
-3. How to train ML models
-4. How to evaluate model performance
-5. How to deploy apps on Streamlit Cloud
+## 🧪 Sample Datasets for Testing
+You can test this application using datasets from Kaggle, such as:
+- Students Performance Dataset
+- House Price Dataset
+- Store Sales Dataset
+- Medical Insurance Dataset
+- Car Price Dataset
 
-👤 Author
-Indar Singh Rajawat
+---
 
+## 💡 Learning Outcomes
+From this project, I learned:
+- How to build interactive applications using Streamlit
+- How to preprocess and clean CSV data
+- How to train and evaluate machine learning models
+- How to visualize analytics and prediction results
+- How to deploy applications on Streamlit Cloud
+
+---
+
+## 👤 Author
+Indar Singh Rajawat  
+AI & Data Science Student  
+
+GitHub: https://github.com/indarsinghrajawt  
+Live App: https://ai-analytics-dashboard-2wonyrv4mc6feddsu2d2mi.streamlit.app/
+
+---
+
+## 🚀 Outcome
+This project simulates a real-world data analytics workflow and demonstrates
+the ability to build production-style analytics applications, apply machine
+learning models, and deploy interactive data-driven tools.
